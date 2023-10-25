@@ -1,0 +1,217 @@
+html { font-size: 62.5%; }
+
+body {
+    background: #f1f2f7;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+  
+/* Box sizing */
+*, *:before, *:after { box-sizing: inherit;}
+  
+/* Titulos */
+h1, h2, h3 { text-align: center; }
+h1 span { font-size: 2rem;}
+  
+.titulo {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 4.8rem;
+}
+  
+.subtitulo1 { font-size: 3.5rem;}
+.subtitulo2 { font-size: 2rem;}
+  
+  /* Barra de navegación */
+.barraNav {
+    max-width: 100rem;
+    margin: 3rem auto 0 auto;
+    color: white;
+    font-size: 1.5rem;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+  
+.barraNav section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+}
+  
+.barraNav section a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+/* Mini Background */
+.mini-background {
+    background-image: url(../imagenes/backgroundHero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 0 250px 0;
+}
+  
+.mini-background-contenido {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 3rem;
+}
+  
+  /* Contenido principal */
+main {
+    max-width: 100rem;
+    margin: 3rem auto;
+    border-radius: 10px;
+    border-color: #3b71ca;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1rem;
+}
+  
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.icono {
+    height: 9rem;
+    width: 9rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: white;
+}
+  
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 768px){
+    
+    h1 span{font-size: 3rem;}
+    .titulo{margin-top: 2rem;margin-bottom: 2rem;font-size: 4.8rem;}
+    .subtitulo1{font-size: 3.5rem;}
+    .subtitulo2{font-size: 2rem;}
+    
+    .barraNav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;  
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .mensaje {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: black;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+     
+    .mensaje h1 {
+        font-size: 36px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(22), blink-caret 0.5s step-end infinite alternate;
+    }
+     
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+     
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: black; }
+    }
+     
+    .contenido {
+        display: none;
+        animation: aparecer 1s ease-in-out forwards;
+    }
+     
+    @keyframes aparecer {
+        0% {
+           opacity: 0;
+           transform: translateY(20px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    } 
+}
+.mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: black;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+ 
+.mensaje h1 {
+    font-size: 36px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(22), blink-caret 0.5s step-end infinite alternate;
+}
+ 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+ 
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+ 
+.contenido {
+    display: none;
+    animation: aparecer 1s ease-in-out forwards;
+}
+ 
+@keyframes aparecer {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+} 
